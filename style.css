@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.5;
+}
+
+.header {
+    text-align: center;
+    padding: 32px 16px 16px;
+}
+
+.subtitle {
+    color: #94a3b8;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.controls input {
+    flex: 1;
+    min-width: 200px;
+}
+
+input,
+select,
+.button {
+    padding: 10px 14px;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    background: #1e293b;
+    color: #e2e8f0;
+    font-size: 14px;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.button:hover,
+.button.active {
+    background: #3b82f6;
+    border-color: #3b82f6;
+}
+
+.status {
+    color: #94a3b8;
+    margin-bottom: 12px;
+}
+
+.status.error {
+    color: #f87171;
+}
+
+.coin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.coin-table th,
+.coin-table td {
+    padding: 12px 8px;
+    text-align: left;
+    border-bottom: 1px solid #1e293b;
+}
+
+.coin-table th {
+    color: #94a3b8;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.coin-row {
+    cursor: pointer;
+}
+
+.coin-row:hover {
+    background: #1e293b;
+}
+
+.coin-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.coin-name img {
+    width: 24px;
+    height: 24px;
+}
+
+.symbol {
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.positive {
+    color: #4ade80;
+}
+
+.negative {
+    color: #f87171;
+}
+
+.star {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #475569;
+}
+
+.star.saved {
+    color: #facc15;
+}
+
+.chart-section {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.hidden {
+    display: none;
+}
+
+.footer {
+    text-align: center;
+    color: #64748b;
+    padding: 32px 16px;
+    font-size: 13px;
+}
+
+.footer a {
+    color: #60a5fa;
+}
+
+@media (max-width: 600px) {
+    .hide-mobile {
+        display: none;
+    }
+}

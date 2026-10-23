@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Market Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Crypto Market Dashboard</h1>
+        <p class="subtitle">Live prices for the top 50 cryptocurrencies</p>
+    </header>
+
+    <main class="container">
+        <section class="controls">
+            <input id="search" type="text" placeholder="Search by name or symbol...">
+            <select id="sort">
+                <option value="rank">Sort by: Rank</option>
+                <option value="price">Sort by: Price</option>
+                <option value="change">Sort by: 24h change</option>
+            </select>
+            <button id="watchlist-toggle" class="button">Show watchlist only</button>
+            <button id="refresh" class="button">Refresh</button>
+        </section>
+
+        <p id="status" class="status">Loading prices...</p>
+
+        <section id="chart-section" class="chart-section hidden">
+            <div class="chart-header">
+                <h2 id="chart-title">Price chart</h2>
+                <button id="chart-close" class="button">Close</button>
+            </div>
+            <canvas id="price-chart"></canvas>
+        </section>
+
+        <table class="coin-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>#</th>
+                    <th>Coin</th>
+                    <th>Price</th>
+                    <th>24h</th>
+                    <th class="hide-mobile">Market cap</th>
+                </tr>
+            </thead>
+            <tbody id="coin-list"></tbody>
+        </table>
+    </main>
+
+    <footer class="footer">
+        Data from <a href="https://www.coingecko.com" target="_blank">CoinGecko</a>. Built by Begum Uzun.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
